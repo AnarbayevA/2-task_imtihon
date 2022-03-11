@@ -1,3 +1,4 @@
+// given array
 var users = {
     "Akmal":  {
         name: "Akmal",
@@ -24,15 +25,15 @@ var users = {
     }
 }
 
-function sumSalary(item) {
-    var collector = []
-    var counter = 0
+function sumSalary(item) {  // total monthly salary
+    var collector = [] // salary list
+    var counter = 0 // variable
 
-    for (var key in item){
-        collector.push(item[key].salary)
+    for (var key in item){ // monthly withdrawal function
+        collector.push(item[key].salary) 
     }
 
-    for (let i = 0; i < collector.length; i++) {
+    for (var i = 0; i < collector.length; i++) { // a function that finds the sum of the months
         counter += collector[i]
         
     }
@@ -41,25 +42,25 @@ function sumSalary(item) {
     
 }
 
-function avarageAge(item2) {
-    var collector = []
-    var counter = 0
-    var result
+function avarageAge(item2) { // average age function
+    var collector = []  // salary list
+    var counter = 0  // variable
+    var result // average value
 
-    for (var key in item2){
+    for (var key in item2){ // a function that pulls out the average age
         collector.push(item2[key].age)
     }
 
-    for (let i = 0; i < collector.length; i++) {
+    for (var i = 0; i < collector.length; i++) { // sum of age
         counter += collector[i]
         
     }
 
-    result = counter / collector.length
+    result = counter / collector.length // average value
     
     return result
 }
 
-console.log(sumSalary(users));
+console.log(sumSalary(users)); // total monthly
 
-console.log(avarageAge(users));
+console.log(avarageAge(users)); // avrage age
